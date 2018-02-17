@@ -37,6 +37,7 @@ Structure of DataBase
 |password|string|null: false|
 
 ### Association
+- has_many :groups, through: :members
 - has_many :messages
 - has_many :members
 
@@ -49,5 +50,6 @@ Structure of DataBase
 |group_name|string|null: false|
 
 ### Association
+- has_many :users, through: :members
 - has_many :messages
 - has_many :members
