@@ -1,0 +1,76 @@
+
+
+!!!
+%html{lang: "ja"}
+  %head
+    %meta{charset: "utf-8"}
+  %body
+    aiko love like pop vol.20
+
+
+        / html comment
+        /
+            comment
+            comment
+            comment
+        -# haml comment
+        -#
+            comment
+            comment
+            comment
+
+        -# tag
+        %p hello
+        %p hello2
+
+        %ul
+            %li
+                item
+            %li<
+                item
+
+        -# div
+        %div{:id => "main1", :class => "cls"}
+        %div{:id => "main2", :class => "cls"}
+        %div#main3.cls
+        #main4.cls
+
+        -# filter
+        :css
+            .cls{
+                color:red;
+            }
+        :javascript
+            console.log("hello")
+        :escaped
+            <div class="escaped"></div>
+
+        -# Ruby
+        %p total is #{5*100}
+        %p= Time.now
+        - x = 5
+        %p= x
+
+        - (1..10).each do |i|
+            %p=i
+
+
+
+
+
+seo
+sample
+good bye world
+
+
+sample
+
+Members: seo neko
+
+seo
+Hello world!
+
+neko
+Good bye world!
+
+
