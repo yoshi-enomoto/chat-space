@@ -1,76 +1,31 @@
-
-
 !!!
 %html{lang: "ja"}
   %head
     %meta{charset: "utf-8"}
   %body
-    aiko love like pop vol.20
+    .aiko
+      aiko love like pop vol.200
+    .yui
+      holidays in the sun
+    .miwa
+      yaneura-no-neko
 
+/ .contents.row
+/   / - @tweets.each do |tweet|
+/     = render partial: "tweet", locals: { tweet: tweet }
 
-        / html comment
-        /
-            comment
-            comment
-            comment
-        -# haml comment
-        -#
-            comment
-            comment
-            comment
+.contents.row
+  / - @tweets.each do |tweet|
+  = render partial: "side-bar"
 
-        -# tag
-        %p hello
-        %p hello2
+.contents.row
+  / - @tweets.each do |tweet|
+  = render partial: "header"
 
-        %ul
-            %li
-                item
-            %li<
-                item
+.contents.row
+  / - @tweets.each do |tweet|
+  = render partial: "mssgs"
 
-        -# div
-        %div{:id => "main1", :class => "cls"}
-        %div{:id => "main2", :class => "cls"}
-        %div#main3.cls
-        #main4.cls
-
-        -# filter
-        :css
-            .cls{
-                color:red;
-            }
-        :javascript
-            console.log("hello")
-        :escaped
-            <div class="escaped"></div>
-
-        -# Ruby
-        %p total is #{5*100}
-        %p= Time.now
-        - x = 5
-        %p= x
-
-        - (1..10).each do |i|
-            %p=i
-
-
-
-
-
-seo
-sample
-good bye world
-
-
-sample
-
-Members: seo neko
-
-seo
-Hello world!
-
-neko
-Good bye world!
-
-
+.contents.row
+  / - @tweets.each do |tweet|
+  = render partial: "form"
