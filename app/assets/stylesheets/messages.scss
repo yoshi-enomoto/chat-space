@@ -1,3 +1,21 @@
 // Place all the styles related to the messages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.notification {
+  background-color: blue;
+  width: 100%;
+}
+
+.wrapper {
+  background-color: yellow; /* 仮カラー */
+  height: 100%;
+  width: 100%;
+}
+
+.chat {
+  background-color: green; /*仮カラー */
+  height: 100%;
+  width: calc(100% - 300px);
+  float: right;
+}

@@ -1,9 +1,71 @@
-.aiko {
-  color: $color1;
+.side-bar {
+  background-color: limegreen; /* デバック用 */
+  height: 100%;
+  width: 300px;
+  float: left;
+  .header {
+    background-color: $dark-navy;
+    height: 100px;
+    line-height: 100px;
+    padding: 0 20px;
+    .header__name {
+      font-style: 16px;
+      color: $white;
+      font-weight: bold;
+      display: inline;
+    }
+    .header__lists {
+      font-size: 5px; /*仮置き（画像が入る為） */
+      list-style: none;
+      float: right;
+      display: inline;
+      .list {
+        display: inline;
+      }
+    }
+  }
 }
-.yui {
-  background-color: $color2;
-}
-.miwa {
-  background-color: $color3;
+.groups {
+  background-color: $light-navy;
+  height: calc(100% - 100px);
+  padding: 0 20px;
+  .group {
+    background-color: orange; /*仮カラー */
+    padding: 20px 0 40px;
+    .group__name {
+      font-size: 15px;
+      color: $white;
+    }
+    .group__message {
+      margin-top: 5px;
+      font-size: 11px;
+      color: $white;
+    }
+  }
+  .group2 {
+    background-color: purple; /*仮カラー */
+    padding: 20px 0 40px;
+    .group2__name {
+      font-size: 15px;
+      color: $white;
+    }
+    .group2__message {
+      margin-top: 5px;
+      font-size: 11px;
+      color: $white;
+    }
+  }
+  .group3 {
+    background-color: silver; /*仮カラー */
+    padding: 20px 0 40px;
+    .group3__name {
+      font-size: 15px;
+      color: $white;
+    }
+    .group3__message {
+      margin-top: 5px;
+      font-size: 11px;
+      color: $white;
+    }
+  }
 }

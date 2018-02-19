@@ -3,29 +3,11 @@
   %head
     %meta{charset: "utf-8"}
   %body
-    .aiko
-      aiko love like pop vol.200
-    .yui
-      holidays in the sun
-    .miwa
-      yaneura-no-neko
-
-/ .contents.row
-/   / - @tweets.each do |tweet|
-/     = render partial: "tweet", locals: { tweet: tweet }
-
-.contents.row
-  / - @tweets.each do |tweet|
-  = render partial: "side-bar"
-
-.contents.row
-  / - @tweets.each do |tweet|
-  = render partial: "header"
-
-.contents.row
-  / - @tweets.each do |tweet|
-  = render partial: "mssgs"
-
-.contents.row
-  / - @tweets.each do |tweet|
-  = render partial: "form"
+    .notification
+    .wrapper
+      .side-bar
+        = render partial: "side-bar"
+      .chat
+        = render partial: "chat-header"
+        = render partial: "chat-mssgs"
+        = render partial: "chat-form"
