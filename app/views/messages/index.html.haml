@@ -1,0 +1,13 @@
+!!!
+%html{lang: "ja"}
+  %head
+    %meta{charset: "utf-8"}
+  %body
+    .notification
+    .wrapper
+      .side-bar
+        = render partial: "side-bar"
+      .chat
+        = render partial: "chat-header"
+        = render partial: "chat-mssgs"
+        = render partial: "chat-form"

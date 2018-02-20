@@ -1,0 +1,70 @@
+.side-bar {
+  height: 100%;
+  width: 300px;
+  float: left;
+  .header {
+    background-color: $dark-navy;
+    height: 100px;
+    line-height: 100px;
+    padding: 0 20px;
+    border-bottom: 0px;
+    &__name {
+      font-size: 16px;
+      color: $white;
+      font-weight: bold;
+      display: inline;
+    }
+    &__lists {
+      font-size: 5px; /*仮置き（画像が入る為） */
+      list-style: none;
+      float: right;
+      display: inline;
+      .list {
+        font-size: 16px;
+        color: $white;
+        display: inline;
+      }
+    }
+  }
+}
+.groups {
+  background-color: $light-navy;
+  height: calc(100% - 100px);
+  padding: 0 20px;
+  .group {
+    padding: 20px 0 40px;
+    .group__name {
+      font-size: 15px;
+      color: $white;
+    }
+    .group__message {
+      margin-top: 5px;
+      font-size: 11px;
+      color: $white;
+    }
+  }
+  .group2 {
+    padding: 20px 0 40px;
+    .group2__name {
+      font-size: 15px;
+      color: $white;
+    }
+    .group2__message {
+      margin-top: 5px;
+      font-size: 11px;
+      color: $white;
+    }
+  }
+  .group3 {
+    padding: 20px 0 40px;
+    .group3__name {
+      font-size: 15px;
+      color: $white;
+    }
+    .group3__message {
+      margin-top: 5px;
+      font-size: 11px;
+      color: $white;
+    }
+  }
+}
