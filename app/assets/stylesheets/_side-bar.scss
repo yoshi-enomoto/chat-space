@@ -34,35 +34,12 @@
   padding: 0 20px;
   .group {
     padding: 20px 0 40px;
-    .group__name {
+    box-sizing: border-box;
+    &__name {
       font-size: 15px;
       color: $white;
     }
-    .group__message {
-      margin-top: 5px;
-      font-size: 11px;
-      color: $white;
-    }
-  }
-  .group2 {
-    padding: 20px 0 40px;
-    .group2__name {
-      font-size: 15px;
-      color: $white;
-    }
-    .group2__message {
-      margin-top: 5px;
-      font-size: 11px;
-      color: $white;
-    }
-  }
-  .group3 {
-    padding: 20px 0 40px;
-    .group3__name {
-      font-size: 15px;
-      color: $white;
-    }
-    .group3__message {
+    &__message {
       margin-top: 5px;
       font-size: 11px;
       color: $white;
