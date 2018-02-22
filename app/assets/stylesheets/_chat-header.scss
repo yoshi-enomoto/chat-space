@@ -23,6 +23,8 @@
     margin-top: 28px;
     border: 1px solid $light-blue;
     &__button {
+      text-decoration: none;
+      color: $light-blue;
     }
   }
 }
