@@ -1,9 +1,9 @@
 .wrapper
   .side-bar
-    = render "side-bar"
+    = render "shared/side-bar"
   .chat
-    = render "chat-header"
+    = render "shared/chat-header"
     .messages
-      = render partial: "chat-mssgs", collection: @messages, as: "message"
-    = render "chat-form"
+      = render partial: "shared/chat-mssgs", collection: @messages, as: "message"
+    = render "shared/chat-form"
 
