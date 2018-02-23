@@ -3,5 +3,7 @@
     = render "side-bar"
   .chat
     = render "chat-header"
-    = render "chat-mssgs"
+    .messages
+      = render partial: "chat-mssgs", collection: @messages, as: "message"
     = render "chat-form"
+
