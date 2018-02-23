@@ -3,35 +3,38 @@
   box-sizing: border-box;
   height: 90px;
   padding: 20px 40px;
-  .js-form {
-    .form__message {
-      box-sizing: border-box;
-      height: 50px;
-      font-size: 16px;
-      color: #434A54;
+  &__message {
+    box-sizing: border-box;
+    height: 50px;
+    font-size: 16px;
+    color: #434A54;
+    float: left;
+    padding-left: 10px;
+    width: calc(100% - 145px);
+    border-style: none;
+  }
+  &__mask {
+    &__image {
+      background-color: $white;
       float: left;
-      padding-left: 10px;
-      width: calc(100% - 145px);
-      border-style: none;
-    }
-    .form__mask {
-      &__image {
-        background-color: $white;
+      .icon {
         height: 50px;
         line-height: 50px;
         padding-right: 10px;
-        float: left;
+      }
+      .hidden {
+        display: none;
       }
     }
-    .form__submit {
-      background-color: #38AEF0;
-      color: $white;
-      font-size: 16px;
-      height: 50px;
-      line-height: 50px;
-      margin-left: 15px;
-      padding: 0 30px;
-      float: right;
-    }
+  }
+  &__submit {
+    background-color: #38AEF0;
+    color: $white;
+    font-size: 16px;
+    height: 50px;
+    line-height: 50px;
+    margin-left: 15px;
+    padding: 0 30px;
+    float: right;
   }
 }
