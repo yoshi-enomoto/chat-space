@@ -44,6 +44,7 @@ $(function() {
       var html = buildHTML(data);
       $(".messages").append(html);
       $(".form__message").val("");
+      $(".hidden").val("");
       $(".form__submit").removeAttr("disabled");
       $(".messages").animate({scrollTop :$(".messages")[0].scrollHeight});
       // alert("メッセージが送信されました");
