@@ -25,11 +25,8 @@ $(function() {
 
   $("#new_message").on("submit", function(e) {
     e.preventDefault();
-    // console.log(this);
-    // var formData = new FormData($("form")[0])
     var formData = new FormData(this);
     var url = $(this).attr("action");
-    // console.log(url);
 
     $.ajax({
       url: url,
@@ -40,14 +37,12 @@ $(function() {
       contentType: false
     })
     .done(function(data) {
-      console.log(data);
       var html = buildHTML(data);
       $(".messages").append(html);
       $(".form__message").val("");
       $(".hidden").val("");
       $(".form__submit").removeAttr("disabled");
       $(".messages").animate({scrollTop :$(".messages")[0].scrollHeight});
-      // alert("メッセージが送信されました");
     })
     .fail(function(){
       alert("error");
