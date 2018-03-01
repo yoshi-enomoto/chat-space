@@ -14,12 +14,13 @@
     border-style: none;
   }
   &__mask {
+    height: 50px;
+    line-height: 50px;
+    float: left;
     &__image {
       background-color: $white;
       float: left;
       .icon {
-        height: 50px;
-        line-height: 50px;
         padding-right: 10px;
       }
       .hidden {
