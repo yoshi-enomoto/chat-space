@@ -21,27 +21,29 @@ $(function() {
 
   $("#user-search-field").on("keyup", function() {
     var input = $("#user-search-field").val();
-    $.ajax({
-      url: "/users",
-      type: "GET",
-      data: { keyword: input },
-      dataType: "json"
-    })
+    if (input.length !== 0){
+      $.ajax({
+        url: "/users",
+        type: "GET",
+        data: { keyword: input },
+        dataType: "json"
+      })
 
-    .done(function(user){
-      $("#user-search-result").empty();
-      if (user.length !== 0){
-        user.forEach(function(user){
-          appendUser(user);
-        });
-      }
-      else{
-        appendNoUser("一致するユーザーはいません");
-      }
-    })
-    .fail(function(){
-      alert("ユーザー検索に失敗しました");
-    })
+      .done(function(user){
+        $("#user-search-result").empty();
+        if (user.length !== 0){
+          user.forEach(function(user){
+            appendUser(user);
+          });
+        }
+        else{
+          appendNoUser("一致するユーザーはいません");
+        }
+      })
+      .fail(function(){
+        alert("ユーザー検索に失敗しました");
+      })
+    }
   });
 
 // ユーザー検索--追加・削除
