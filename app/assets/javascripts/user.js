@@ -1,5 +1,6 @@
 $(function() {
 
+// ユーザー検索
   var search_user = $("#user-search-result");
 
   function appendUser(user){
@@ -11,7 +12,6 @@ $(function() {
   }
 
   function appendNoUser(user){
-    // var html=""
     var html=`<div class="chat-group-user clearfix">
                 <p class="chat-group-user__name">${user}</p>
               </div>`
@@ -43,4 +43,31 @@ $(function() {
       alert("ユーザー検索に失敗しました");
     })
   });
+
+// ユーザー検索--追加・削除
+  var add_user = $(".chat-group-users");
+
+  function adduser(userid,username){
+    var html=`<div class='chat-group-user clearfix js-chat-member' id='chat-group-user-${userid}'>
+                <input name='group[user_ids][]' type='hidden' value='${userid}'>
+                <p class='chat-group-user__name'>${username}</p>
+                <a class='user-search-remove chat-group-user__btn chat-group-user__btn--remove js-remove-btn' data-user-id="${userid}" data-user-name="${username}">削除</a>
+              </div>`
+
+    add_user.append(html);
+  }
+
+// --追加
+  $(document).on("click",".user-search-add", function() {
+    var userid = $(this).data("user-id");
+    var username = $(this).data("user-name");
+    $(this).parent().remove();
+    adduser(userid,username);
+  });
+
+// --削除
+    $(document).on("click",".user-search-remove", function() {
+    $(this).parent().remove();
+  });
+
 });
