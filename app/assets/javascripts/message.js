@@ -1,4 +1,6 @@
 $(function() {
+
+//メッセージ送信の非同期通信
   function buildHTML(message){
     var body = message.body ? `<p class="lower-message__content">
                                  ${message.body}
@@ -6,7 +8,7 @@ $(function() {
 
     var image = message.image ? `<img class="lower-message__image" src="${message.image}">` : ""
 
-    var html=`<div class="message">
+    var html=`<div class="message" data-message-id="${message.id}">
                 <div class="upper-message">
                   <div class="upper-message__user-name">
                     ${message.user_name}
@@ -48,4 +50,27 @@ $(function() {
       alert("error");
     })
   })
+
+//自動更新機能の実装
+  $(function(){
+    setInterval(update, 5000);
+  });
+
+  function update(){
+    $.ajax({
+      url: location.href,
+      type: "GET",
+      dataType: "json"
+    })
+    .done(function(data) {
+      var id = $(".message:last").data("message-id");
+      data.messages.forEach(function(message){
+        if (message.id > id) {
+          var html = buildHTML(message);
+          $(".messages").append(html);
+          $(".messages").animate({scrollTop :$(".messages")[0].scrollHeight});
+        }
+      })
+    })
+  }
 })
