@@ -15,13 +15,13 @@ class Repository
   end
 
   def active_branch
-    repository.branches.max { |a, b| a.updated_at <=> b.updated_at }
+    repository.branches.max_by(&:updated_at)
   end
 
   private
 
   def repository
-    client.repository  full_name
+    client.repository full_name
   end
 
   def full_name
