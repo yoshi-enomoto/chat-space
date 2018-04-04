@@ -21,4 +21,3 @@
 
 *.jpeg
 config/secrets.yml
-.env

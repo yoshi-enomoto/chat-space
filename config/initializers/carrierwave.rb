@@ -5,10 +5,7 @@ require 'carrierwave/storage/fog'
 # ローカルでの保存は機能しない（AWSでの保存も確認していない）
 # S3を使用しているかを判定するためのメソッド。（ローカル環境ではS3を使わないため）
 def use_s3?
-  ENV['S3_ACCESS_KEY'] && ENV['S3_SECRET_KEY'] && ENV['S3_REGION'] && ENV['S3_BUCKET']
-end
-
-  # Rails.application.secrets.aws_access_key_id && Rails.application.secrets.aws_secret_access_key && us-east-1 && upload--tteesstt
+  Rails.application.secrets.aws_access_key_id && Rails.application.secrets.aws_secret_access_key && us-east-1 && upload--tteesstt
 end
 
 ## CarrierWaveの設定
@@ -18,18 +15,13 @@ CarrierWave.configure do |config|
     # config.storage = :fog
     config.fog_credentials = {
       provider: 'AWS',
-      aws_access_key_id: ENV['S3_ACCESS_KEY'],
-      aws_secret_access_key: ENV['S3_SECRET_KEY'],
-      region: ENV['S3_REGION']
-
-      # aws_access_key_id: Rails.application.secrets.aws_access_key_id,
-      # aws_secret_access_key: Rails.application.secrets.aws_secret_access_key,
-      # region: 'us-east-1'
+      aws_access_key_id: Rails.application.secrets.aws_access_key_id,
+      aws_secret_access_key: Rails.application.secrets.aws_secret_access_key,
+      region: 'us-east-1'
     }
 
   # S3のバケットを指定。
-  config.fog_directory  = ENV['S3_BUCKET']
-  # config.fog_directory  = 'upload--tteesstt'
+  config.fog_directory  = 'upload--tteesstt'
 
   # 一般公開させて無いS3の場合は以下の設定を行う。
   # config.fog_public     = false
