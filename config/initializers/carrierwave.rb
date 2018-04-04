@@ -5,7 +5,7 @@ require 'carrierwave/storage/fog'
 # ローカルでの保存は機能しない（AWSでの保存も確認していない）
 # S3を使用しているかを判定するためのメソッド。（ローカル環境ではS3を使わないため）
 def use_s3?
-  Rails.application.secrets.aws_access_key_id && Rails.application.secrets.aws_secret_access_key && 'us-east-1' && 'upload--tteesstt'
+  Rails.application.secrets.aws_access_key_id && Rails.application.secrets.aws_secret_access_key && us-east-1 && upload--tteesstt
 end
 
 ## CarrierWaveの設定
