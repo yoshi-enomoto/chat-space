@@ -30,7 +30,8 @@ CarrierWave.configure do |config|
   # config.fog_authenticated_url_expiration = 60
   # CarrierWave::SanitizedFile.sanitize_regexp = /[^[:word:]\.\-\+]/
 
-  config.asset_host = 'https://s3-us-east-1.amazonaws.com/upload--tteesstt'
+  # config.asset_host = 'https://s3-us-east-1.amazonaws.com/upload--tteesstt'
+  config.asset_host = 'https://s3.amazonaws.com/upload--tteesstt'
   end
 
   # public配下にキャッシュができると参照されてしまうので、予め変えておく。
