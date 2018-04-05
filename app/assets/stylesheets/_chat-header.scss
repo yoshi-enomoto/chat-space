@@ -9,9 +9,19 @@
       color: #333;
     }
     &__members {
+      &:after {
+        clear: both;
+        content: "";
+        display: block;
+      }
       margin-top: 15px;
       font-size: 12px;
       color: #999;
+    }
+    &__member {
+      list-style: none;
+      display: inline-block;
+      padding-right: 5px;
     }
   }
   .right-header {
